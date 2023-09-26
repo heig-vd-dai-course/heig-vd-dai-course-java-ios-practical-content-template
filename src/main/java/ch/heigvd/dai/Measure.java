@@ -39,7 +39,7 @@ public class Measure {
         wr.write(filename, sizeInBytes);
 
         long end = System.nanoTime();
-        System.out.println("Elapsed time: " + (end - start) / 1000000 + "ms");
+        System.out.println("Elapsed time: " + (end - start) / 1000000 + "ms / " + (end - start) + "ns");
     }
 
     /**
@@ -62,6 +62,6 @@ public class Measure {
         rd.read(filename);
 
         long end = System.nanoTime();
-        System.out.println("Elapsed time: " + (end - start) / 1000000 + "ms " + (end - start) + "ns");
+        System.out.println("Elapsed time: " + (end - start) / 1000000 + "ms / " + (end - start) + "ns");
     }
 }
