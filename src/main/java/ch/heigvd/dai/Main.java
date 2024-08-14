@@ -1,17 +1,31 @@
 package ch.heigvd.dai;
 
-import java.io.IOException;
+import ch.heigvd.dai.commands.Root;
+import java.io.File;
+import picocli.CommandLine;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
+    // Define command name - source: https://stackoverflow.com/a/11159435
+    String jarFilename =
+        new File(Main.class.getProtectionDomain().getCodeSource().getLocation().getPath())
+            .getName();
 
-        // Measure the time to write a file (e.g : 1 byte, no buffer and binary file)
+    // Create root command
+    Root root = new Root();
 
-        Measure.write("binary_1B.bin", 1, false, Measure.FileType.BINARY);
+    // Calculate execution time for root command and its subcommands
+    Long start = System.nanoTime();
+    int exitCode =
+        new CommandLine(root)
+            .setCommandName(jarFilename)
+            .setCaseInsensitiveEnumValuesAllowed(true)
+            .execute(args);
+    Long end = System.nanoTime();
 
-        // Measure the time to read the same file
+    System.out.println("Execution time in ms: " + (end - start) / (1000 * 1000));
 
-        Measure.read("binary_1B.bin", false, Measure.FileType.BINARY);
-    }
+    System.exit(exitCode);
+  }
 }

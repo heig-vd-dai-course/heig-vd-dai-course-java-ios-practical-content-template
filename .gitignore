@@ -1,3 +1,7 @@
+## Custom
+*.txt
+*.bin
+
 ## IntelliJ IDEA
 
 # General
