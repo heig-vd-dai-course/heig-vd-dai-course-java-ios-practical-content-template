@@ -24,7 +24,9 @@ public class Main {
             .execute(args);
     Long end = System.nanoTime();
 
-    System.out.println("Execution time in ms: " + (end - start) / (1000 * 1000));
+    if (exitCode == 0) {
+      System.out.println("Execution time in ms: " + (end - start) / (1000 * 1000));
+    }
 
     System.exit(exitCode);
   }
