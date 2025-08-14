@@ -1,6 +1,6 @@
-package ch.heigvd.dai.ios.binary;
+package ch.heigvd.ios.binary;
 
-import ch.heigvd.dai.ios.Writable;
+import ch.heigvd.ios.Writable;
 
 /**
  * A class that writes binary files. This implementation writes the file byte per byte. It manages
