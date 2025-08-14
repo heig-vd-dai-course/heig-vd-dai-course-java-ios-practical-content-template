@@ -1,7 +1,6 @@
-package ch.heigvd.dai.ios.text;
+package ch.heigvd.ios.text;
 
-import ch.heigvd.dai.ios.Writable;
-import java.io.*;
+import ch.heigvd.ios.Writable;
 
 /**
  * A class that writes text files. This implementation write the file byte per byte. It manages the
@@ -10,7 +9,7 @@ import java.io.*;
 public class TextFileWriter implements Writable {
 
   @Override
-  public void write(String filename, int sizeInBytes) {
+  public void write(String filename, int size) {
     throw new UnsupportedOperationException("Please remove this exception and implement this method.");
   }
 }

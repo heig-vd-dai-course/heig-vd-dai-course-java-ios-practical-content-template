@@ -1,6 +1,6 @@
-package ch.heigvd.dai.ios.binary;
+package ch.heigvd.ios.binary;
 
-import ch.heigvd.dai.ios.Readable;
+import ch.heigvd.ios.Readable;
 
 /**
  * A class that reads binary files. This implementation reads the file byte per byte. It manages the

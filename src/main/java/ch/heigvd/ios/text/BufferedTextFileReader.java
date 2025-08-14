@@ -1,7 +1,6 @@
-package ch.heigvd.dai.ios.text;
+package ch.heigvd.ios.text;
 
-import ch.heigvd.dai.ios.Readable;
-import java.io.*;
+import ch.heigvd.ios.Readable;
 
 /**
  * A class that reads text files. This implementation reads the file using a buffered reader around
